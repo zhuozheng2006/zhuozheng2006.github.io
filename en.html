@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zhuo Zheng · Homepage</title>
   <meta name="description" content="The homepage of Zhuo Zheng">
-  <meta name="theme-color" content="#f7f3ea">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f7f3ea'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' font-family='Georgia,serif' font-style='italic' fill='%238a2f1d'%3E%CF%80%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f6f7f4">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f6f7f4'/%3E%3Ctext x='32' y='47' font-size='40' text-anchor='middle' font-family='Georgia,serif' font-style='italic' fill='%23a03c2c'%3E%CF%80%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -19,76 +20,82 @@
 <body>
   <header class="site-header">
     <a class="brand" href="./en.html">Zhuo Zheng<span class="brand__slash"> / </span><span class="brand__sub">Homepage</span></a>
-    <nav class="nav" aria-label="Site navigation">
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#papers">Papers</a>
-      <a href="#projects">Projects</a>
-      <a class="nav__lang" href="index.html">中文</a>
-    </nav>
+    <div class="header__side">
+      <nav class="nav" aria-label="Site navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#papers">Papers</a>
+        <a href="#projects">Projects</a>
+        <a class="nav__lang" href="index.html">中文</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <p class="hero__kicker">ZHUO ZHENG · 郑卓</p>
-      <h1 class="hero__title">Zhuo Zheng</h1>
-      <p class="hero__subtitle">News · Papers · Projects</p>
-    </section>
+  <div class="layout">
+    <aside class="profile" aria-label="Personal information">
+      <img class="profile__photo" src="photo.jpg" alt="Portrait of Zhuo Zheng" width="148" height="148">
+      <h1 class="profile__name">Zhuo Zheng</h1>
+      <p class="profile__latin">郑卓</p>
+      <p class="profile__affil">Peking University<span class="profile__affil--sub"> · 北京大学</span></p>
+      <p class="profile__email"><a href="mailto:zhuozheng25@stu.pku.edu.cn">zhuozheng25@stu.pku.edu.cn</a></p>
+    </aside>
 
-    <section class="equations" aria-label="Three beautiful formulas">
-      <figure class="equation">
-        <div class="equation__formula">\[ e^{i\pi} + 1 = 0 \]</div>
-        <figcaption>Euler's identity — five constants, one line</figcaption>
-      </figure>
-      <figure class="equation">
-        <div class="equation__formula">\[ \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \]</div>
-        <figcaption>Stokes' theorem — a conversation between boundary and interior</figcaption>
-      </figure>
-      <figure class="equation">
-        <div class="equation__formula">\[ \int_{-\infty}^{+\infty} e^{-x^{2}}\,\mathrm{d}x = \sqrt{\pi} \]</div>
-        <figcaption>The Gaussian integral — an accidental √π</figcaption>
-      </figure>
-    </section>
+    <main class="main-col">
+      <section class="equations" aria-label="Three beautiful formulas">
+        <figure class="equation">
+          <div class="equation__formula">\[ e^{i\pi} + 1 = 0 \]</div>
+          <figcaption>Euler's identity — five constants, one line</figcaption>
+        </figure>
+        <figure class="equation">
+          <div class="equation__formula">\[ \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \]</div>
+          <figcaption>Stokes' theorem — a conversation between boundary and interior</figcaption>
+        </figure>
+        <figure class="equation">
+          <div class="equation__formula">\[ \int_{-\infty}^{+\infty} e^{-x^{2}}\,\mathrm{d}x = \sqrt{\pi} \]</div>
+          <figcaption>The Gaussian integral — an accidental √π</figcaption>
+        </figure>
+      </section>
 
-    <section id="about" class="section">
-      <h2><span class="section__no">§ 1</span>About</h2>
-      <p class="lead">Hello, I'm Zhuo Zheng.</p>
-    </section>
+      <section id="about" class="section">
+        <h2><span class="section__no">§ 1</span>About</h2>
+        <p class="lead">Hello, I'm Zhuo Zheng.</p>
+      </section>
 
-    <section id="news" class="section">
-      <h2><span class="section__no">§ 2</span>News</h2>
-      <ol class="notes">
-        <!-- News template:
-        <li class="note">
-          <span class="note__meta">2026-08-13 · Site</span>
-          <span class="note__title note__title--plain">Something happened.</span>
-        </li>
-        -->
-      </ol>
-    </section>
+      <section id="news" class="section">
+        <h2><span class="section__no">§ 2</span>News</h2>
+        <ol class="notes">
+          <!-- News template:
+          <li class="note">
+            <span class="note__meta">2026-08-13 · Site</span>
+            <span class="note__title note__title--plain">Something happened.</span>
+          </li>
+          -->
+        </ol>
+      </section>
 
-    <section id="papers" class="section">
-      <h2><span class="section__no">§ 3</span>Papers</h2>
-      <ol class="notes">
-        <!-- Paper template:
-        <li class="note">
-          <span class="note__meta">2026 · Conference / Journal</span>
-          <a class="note__title" href="https://arxiv.org/abs/xxxx.xxxxx">Paper Title</a>
-          <p class="note__excerpt">Author One, Author Two · arXiv:xxxx.xxxxx</p>
-        </li>
-        -->
-      </ol>
-    </section>
+      <section id="papers" class="section">
+        <h2><span class="section__no">§ 3</span>Papers</h2>
+        <ol class="notes">
+          <!-- Paper template:
+          <li class="note">
+            <span class="note__meta">2026 · Conference / Journal</span>
+            <a class="note__title" href="https://arxiv.org/abs/xxxx.xxxxx">Paper Title</a>
+            <p class="note__excerpt">Author One, Author Two · arXiv:xxxx.xxxxx</p>
+          </li>
+          -->
+        </ol>
+      </section>
 
-    <section id="projects" class="section">
-      <h2><span class="section__no">§ 4</span>Projects</h2>
-      <ul class="projects">
-        <!-- Project template:
-        <li><a href="https://github.com/"><strong>Project Name</strong><span>One-line description.</span><i>→</i></a></li>
-        -->
-      </ul>
-    </section>
-  </main>
+      <section id="projects" class="section">
+        <h2><span class="section__no">§ 4</span>Projects</h2>
+        <ul class="projects">
+          <!-- Project template:
+          <li><a href="https://github.com/"><strong>Project Name</strong><span>One-line description.</span><i>→</i></a></li>
+          -->
+        </ul>
+      </section>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p class="site-footer__meta">© 2026 Zhuo Zheng</p>
