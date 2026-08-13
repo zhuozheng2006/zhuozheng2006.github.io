@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -29,86 +33,65 @@
       <p class="hero__kicker">ZHUO ZHENG · 郑卓</p>
       <h1 class="hero__title">Zhuo Zheng</h1>
       <p class="hero__subtitle">笔记 · 论文 · 项目 · 未完成的证明</p>
-      <div class="abstract">
-        <p class="abstract__label">摘　要</p>
-        <p class="abstract__text">本页由郑卓（Zhuo Zheng）维护，用于存放学习笔记、论文与项目。作者相信：简洁是可靠性的前提，一个优美的等式胜过一百句解释。</p>
-        <p class="abstract__keywords"><strong>关键词</strong>：深度学习 · 机器学习 · 编程 · 数学</p>
-      </div>
     </section>
 
     <section class="equations" aria-label="三个优美的公式">
       <figure class="equation">
-        <div class="equation__formula">e<sup>iπ</sup> + 1 = 0</div>
+        <div class="equation__formula">\[ e^{i\pi} + 1 = 0 \]</div>
         <figcaption>欧拉恒等式——五个常数的相遇</figcaption>
       </figure>
       <figure class="equation">
-        <div class="equation__formula">∫<sub>∂Ω</sub> ω = ∫<sub>Ω</sub> dω</div>
+        <div class="equation__formula">\[ \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \]</div>
         <figcaption>斯托克斯定理——边界与内部的对话</figcaption>
       </figure>
       <figure class="equation">
-        <div class="equation__formula">∫<sub>−∞</sub><sup>+∞</sup> e<sup>−x²</sup> dx = √π</div>
+        <div class="equation__formula">\[ \int_{-\infty}^{+\infty} e^{-x^{2}}\,\mathrm{d}x = \sqrt{\pi} \]</div>
         <figcaption>高斯积分——与 √π 的一场偶然</figcaption>
       </figure>
     </section>
 
     <section id="about" class="section">
       <h2><span class="section__no">§ 1</span>About</h2>
-      <p class="lead">你好，我是郑卓（Zhuo Zheng）。这里是我在网上的一个简单居所：学习笔记、论文与项目。白天写代码，晚上读论文；相信简洁是可靠性的前提，也相信一个优美的等式胜过一百句解释。∎</p>
-      <p class="about__links">GitHub · <a href="https://github.com/zhuozheng2006">github.com/zhuozheng2006</a></p>
+      <p class="lead">你好，我是郑卓。</p>
     </section>
 
     <section id="news" class="section">
       <h2><span class="section__no">§ 2</span>News</h2>
       <ol class="notes">
+        <!-- 新闻条目模板：
         <li class="note">
           <span class="note__meta">2026-08-13 · 站点</span>
-          <span class="note__title note__title--plain">个人主页上线，采用「学术论文」主题。</span>
+          <span class="note__title note__title--plain">发生了什么事情。</span>
         </li>
-        <li class="note">
-          <span class="note__meta">2026-08 · 学习</span>
-          <span class="note__title note__title--plain">正在整理《动手学深度学习》的学习手记。</span>
-        </li>
+        -->
       </ol>
     </section>
 
     <section id="papers" class="section">
       <h2><span class="section__no">§ 3</span>Papers</h2>
       <ol class="notes">
+        <!-- 论文模板：
         <li class="note">
-          <span class="note__meta">即将添加</span>
-          <span class="note__title note__title--plain">论文条目即将出现在这里。</span>
-          <p class="note__excerpt">新增一篇论文时，复制下面注释中的模板，按「年份 · 会议/期刊 / 题目 / 链接」的格式填写即可。</p>
+          <span class="note__meta">2026 · Conference / Journal</span>
+          <a class="note__title" href="https://arxiv.org/abs/xxxx.xxxxx">Paper Title</a>
+          <p class="note__excerpt">Author One, Author Two · arXiv:xxxx.xxxxx</p>
         </li>
+        -->
       </ol>
-      <!-- 论文模板：
-      <li class="note">
-        <span class="note__meta">2026 · Conference / Journal</span>
-        <a class="note__title" href="https://arxiv.org/abs/xxxx.xxxxx">Paper Title</a>
-        <p class="note__excerpt">Author One, Author Two · arXiv:xxxx.xxxxx</p>
-      </li>
-      -->
     </section>
 
     <section id="projects" class="section">
       <h2><span class="section__no">§ 4</span>Projects</h2>
       <ul class="projects">
-        <li><a href="https://github.com/zhuozheng2006/zhuozheng2006.github.io"><strong>personal-site</strong><span>本主页的源码与主题（01「学术论文」）。</span><i>→</i></a></li>
-        <li><a href="#"><strong>d2l 学习手记</strong><span>《动手学深度学习》的笔记与实验，整理中。</span><i>→</i></a></li>
-        <li><a href="#"><strong>λ-笔记</strong><span>极简知识库生成器，计划中。</span><i>→</i></a></li>
+        <!-- 项目模板：
+        <li><a href="https://github.com/"><strong>项目名称</strong><span>一句话描述。</span><i>→</i></a></li>
+        -->
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="references">
-      <p class="references__label">参考文献</p>
-      <ol>
-        <li>Knuth, D. E. (1968–). <em>计算机程序设计艺术</em>.</li>
-        <li>Ramanujan, S. (1919). <em>出租车上的笔记</em>.</li>
-        <li>Turing, A. M. (1936). <em>论可计算数</em>.</li>
-      </ol>
-    </div>
-    <p class="site-footer__meta">Zhuo Zheng（郑卓） · 2026 · 排版 纯手工 · 本页无跟踪器，只有诚实的排版。</p>
+    <p class="site-footer__meta">© 2026 Zhuo Zheng（郑卓） · 本页无跟踪器，只有诚实的排版。</p>
     <p class="site-footer__page">— 1 —</p>
   </footer>
 </body>
