@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zhuo Zheng · Homepage</title>
+  <meta name="description" content="The homepage of Zhuo Zheng: notes, papers, and projects.">
+  <meta name="theme-color" content="#f7f3ea">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f7f3ea'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' font-family='Georgia,serif' font-style='italic' fill='%238a2f1d'%3E%CF%80%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">Zhuo Zheng<span class="brand__slash"> / </span><span class="brand__sub">郑卓</span></a>
+    <nav class="nav" aria-label="Site navigation">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#papers">Papers</a>
+      <a href="#projects">Projects</a>
+      <a class="nav__lang" href="index.html">中文</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero__kicker">ZHUO ZHENG · 郑卓</p>
+      <h1 class="hero__title">Zhuo Zheng</h1>
+      <p class="hero__subtitle">Notes · Papers · Projects · Unfinished Proofs</p>
+      <div class="abstract">
+        <p class="abstract__label">Abstract</p>
+        <p class="abstract__text">This page is maintained by Zhuo Zheng (郑卓), collecting study notes, papers, and projects. The author believes simplicity is a prerequisite for reliability — and that one elegant equation can say more than a hundred explanations.</p>
+        <p class="abstract__keywords"><strong>Keywords</strong>: deep learning · machine learning · programming · mathematics</p>
+      </div>
+    </section>
+
+    <section class="equations" aria-label="Three beautiful formulas">
+      <figure class="equation">
+        <div class="equation__formula">e<sup>iπ</sup> + 1 = 0</div>
+        <figcaption>Euler's identity — five constants, one line</figcaption>
+      </figure>
+      <figure class="equation">
+        <div class="equation__formula">∫<sub>∂Ω</sub> ω = ∫<sub>Ω</sub> dω</div>
+        <figcaption>Stokes' theorem — a conversation between boundary and interior</figcaption>
+      </figure>
+      <figure class="equation">
+        <div class="equation__formula">∫<sub>−∞</sub><sup>+∞</sup> e<sup>−x²</sup> dx = √π</div>
+        <figcaption>The Gaussian integral — an accidental √π</figcaption>
+      </figure>
+    </section>
+
+    <section id="about" class="section">
+      <h2><span class="section__no">§ 1</span>About</h2>
+      <p class="lead">Hello, I'm Zhuo Zheng (郑卓). This is a small home on the web for my notes, papers, and projects. I write code by day and read papers at night; I believe simplicity is a prerequisite for reliability — and that one elegant equation can say more than a hundred explanations. ∎</p>
+      <p class="about__links">GitHub · <a href="https://github.com/zhuozheng2006">github.com/zhuozheng2006</a></p>
+    </section>
+
+    <section id="news" class="section">
+      <h2><span class="section__no">§ 2</span>News</h2>
+      <ol class="notes">
+        <li class="note">
+          <span class="note__meta">2026-08-13 · Site</span>
+          <span class="note__title note__title--plain">Personal homepage launched, set in the Academic Paper theme.</span>
+        </li>
+        <li class="note">
+          <span class="note__meta">2026-08 · Study</span>
+          <span class="note__title note__title--plain">Organizing study notes for Dive into Deep Learning.</span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="papers" class="section">
+      <h2><span class="section__no">§ 3</span>Papers</h2>
+      <ol class="notes">
+        <li class="note">
+          <span class="note__meta">Coming soon</span>
+          <span class="note__title note__title--plain">Paper entries will appear here.</span>
+          <p class="note__excerpt">To add a paper, copy the template in the comment below and fill in year · venue / title / link.</p>
+        </li>
+      </ol>
+      <!-- Paper template:
+      <li class="note">
+        <span class="note__meta">2026 · Conference / Journal</span>
+        <a class="note__title" href="https://arxiv.org/abs/xxxx.xxxxx">Paper Title</a>
+        <p class="note__excerpt">Author One, Author Two · arXiv:xxxx.xxxxx</p>
+      </li>
+      -->
+    </section>
+
+    <section id="projects" class="section">
+      <h2><span class="section__no">§ 4</span>Projects</h2>
+      <ul class="projects">
+        <li><a href="https://github.com/zhuozheng2006/zhuozheng2006.github.io"><strong>personal-site</strong><span>Source and theme of this homepage (01 “Academic Paper”).</span><i>→</i></a></li>
+        <li><a href="#"><strong>d2l Study Notes</strong><span>Notes and experiments for Dive into Deep Learning, in progress.</span><i>→</i></a></li>
+        <li><a href="#"><strong>λ-Notes</strong><span>A minimal knowledge base generator, planned.</span><i>→</i></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="references">
+      <p class="references__label">References</p>
+      <ol>
+        <li>Knuth, D. E. (1968–). <em>The Art of Computer Programming</em>.</li>
+        <li>Ramanujan, S. (1919). <em>Notes from a taxicab</em>.</li>
+        <li>Turing, A. M. (1936). <em>On Computable Numbers</em>.</li>
+      </ol>
+    </div>
+    <p class="site-footer__meta">Zhuo Zheng (郑卓) · 2026 · Typeset by hand · No trackers, just honest typography.</p>
+    <p class="site-footer__page">— 1 —</p>
+  </footer>
+</body>
+</html>
