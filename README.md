@@ -8,6 +8,8 @@
 - `en.html`：英文首页，内容与中文保持同步。
 - `assets/style.css`：响应式布局、字体与配色。
 - `photo.jpg`：个人照片。
+- `assets/portraits/`：顶部哲学家肖像，随站点保存，来源记录见该目录的 `ATTRIBUTIONS.md`。
+- `credits.html`：图片作者、年代与原始来源。
 - `404.html`：找不到页面时的引导。
 - `sitemap.xml`、`robots.txt`：搜索引擎索引。
 

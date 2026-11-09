@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>郑卓 · Zhuo Zheng</title>
   <meta name="description" content="郑卓的个人主页。北京大学学生，记录数学、计算机科学、可视化与折纸相关的项目和学习笔记。">
-  <meta name="theme-color" content="#f8f6f1">
+  <meta name="theme-color" content="#20262a">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://zhuozheng2006.github.io/">
   <link rel="alternate" hreflang="zh-CN" href="https://zhuozheng2006.github.io/">
@@ -21,8 +21,8 @@
 </head>
 <body id="top">
   <a class="skip-link" href="#main">跳至正文</a>
-  <div class="page-shell">
-    <header class="site-header">
+  <header class="site-header">
+    <div class="header-inner">
       <a class="brand" href="./" aria-label="郑卓 · Zhuo Zheng"><span class="brand__cn" lang="zh-CN">郑卓</span><span class="brand__en" lang="en">ZHUO ZHENG</span></a>
       <nav class="nav" aria-label="站点导航">
         <a href="#about">关于</a>
@@ -30,12 +30,34 @@
         <a href="#notes">笔记</a>
         <a href="en.html" class="nav__lang" lang="en" hreflang="en">EN</a>
       </nav>
-    </header>
+    </div>
+  </header>
+  <section class="banner" aria-labelledby="banner-name">
+    <div class="banner__portraits">
+      <figure class="banner__portrait banner__portrait--spinoza">
+        <img src="assets/portraits/spinoza.jpg" alt="斯宾诺莎肖像" width="1377" height="1600" fetchpriority="high">
+      </figure>
+      <figure class="banner__portrait banner__portrait--kant">
+        <img src="assets/portraits/kant.jpg" alt="康德肖像" width="1280" height="1426">
+      </figure>
+      <figure class="banner__portrait banner__portrait--hegel">
+        <img src="assets/portraits/hegel.jpg" alt="黑格尔肖像" width="960" height="1215">
+      </figure>
+      <figure class="banner__portrait banner__portrait--nietzsche">
+        <img src="assets/portraits/nietzsche.jpg" alt="尼采肖像" width="960" height="1281">
+      </figure>
+    </div>
+    <div class="banner__shade" aria-hidden="true"></div>
+    <div class="banner__title">
+      <h1 id="banner-name"><span class="banner__name">郑卓</span><span class="banner__latin" lang="en">ZHUO ZHENG</span></h1>
+    </div>
+    <a class="banner__scroll" href="#about" aria-label="查看关于"><span aria-hidden="true">↓</span></a>
+  </section>
+  <div class="page-shell">
     <main id="main">
       <section class="hero" id="about" aria-labelledby="intro-heading">
         <div class="hero__copy">
-          <p class="eyebrow">个人主页 / PERSONAL HOMEPAGE</p>
-          <h1 id="intro-heading"><span class="hero__name">郑卓</span><small class="hero__latin" lang="en">Zhuo Zheng</small></h1>
+          <h2 id="intro-heading" class="profile-heading">关于</h2>
           <p class="hero__affiliation">北京大学 · Peking University</p>
           <p class="hero__intro">你好，我是郑卓。</p>
           <div class="hero__links">
@@ -107,6 +129,7 @@
     </main>
     <footer class="site-footer">
       <p>© 2026 郑卓<span class="footer-separator" aria-hidden="true"> · </span>Peking University</p>
+      <a class="image-credits" href="credits.html">肖像来源</a>
       <a href="#top">回到顶部 ↑</a>
     </footer>
   </div>

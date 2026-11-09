@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zhuo Zheng · 郑卓</title>
   <meta name="description" content="Zhuo Zheng, a student at Peking University. Projects and study notes on mathematics, computer science, visualization, and origami.">
-  <meta name="theme-color" content="#f8f6f1">
+  <meta name="theme-color" content="#20262a">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://zhuozheng2006.github.io/en.html">
   <link rel="alternate" hreflang="zh-CN" href="https://zhuozheng2006.github.io/">
@@ -21,8 +21,8 @@
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="page-shell">
-    <header class="site-header">
+  <header class="site-header">
+    <div class="header-inner">
       <a class="brand" href="en.html" aria-label="Zhuo Zheng · 郑卓"><span class="brand__cn" lang="zh-CN">郑卓</span><span class="brand__en" lang="en">ZHUO ZHENG</span></a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">About</a>
@@ -30,12 +30,34 @@
         <a href="#notes">Notes</a>
         <a href="index.html" class="nav__lang" lang="zh-CN" hreflang="zh-CN">中文</a>
       </nav>
-    </header>
+    </div>
+  </header>
+  <section class="banner" aria-labelledby="banner-name">
+    <div class="banner__portraits">
+      <figure class="banner__portrait banner__portrait--spinoza">
+        <img src="assets/portraits/spinoza.jpg" alt="Baruch Spinoza portrait" width="1377" height="1600" fetchpriority="high">
+      </figure>
+      <figure class="banner__portrait banner__portrait--kant">
+        <img src="assets/portraits/kant.jpg" alt="Immanuel Kant portrait" width="1280" height="1426">
+      </figure>
+      <figure class="banner__portrait banner__portrait--hegel">
+        <img src="assets/portraits/hegel.jpg" alt="G. W. F. Hegel portrait" width="960" height="1215">
+      </figure>
+      <figure class="banner__portrait banner__portrait--nietzsche">
+        <img src="assets/portraits/nietzsche.jpg" alt="Friedrich Nietzsche portrait" width="960" height="1281">
+      </figure>
+    </div>
+    <div class="banner__shade" aria-hidden="true"></div>
+    <div class="banner__title">
+      <h1 id="banner-name"><span class="banner__name">Zhuo Zheng</span><span class="banner__latin" lang="zh-CN">郑卓</span></h1>
+    </div>
+    <a class="banner__scroll" href="#about" aria-label="Scroll to About"><span aria-hidden="true">↓</span></a>
+  </section>
+  <div class="page-shell">
     <main id="main">
       <section class="hero" id="about" aria-labelledby="intro-heading">
         <div class="hero__copy">
-          <p class="eyebrow">PERSONAL HOMEPAGE / 个人主页</p>
-          <h1 id="intro-heading"><span class="hero__name">Zhuo Zheng</span><small class="hero__latin" lang="zh-CN">郑卓</small></h1>
+          <h2 id="intro-heading" class="profile-heading">About</h2>
           <p class="hero__affiliation">Peking University · 北京大学</p>
           <p class="hero__intro">Hello, I'm Zhuo Zheng.</p>
           <div class="hero__links">
@@ -107,6 +129,7 @@
     </main>
     <footer class="site-footer">
       <p>© 2026 Zhuo Zheng<span class="footer-separator" aria-hidden="true"> · </span>Peking University</p>
+      <a class="image-credits" href="credits.html">Image credits</a>
       <a href="#top">Back to top ↑</a>
     </footer>
   </div>
