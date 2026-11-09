@@ -1,0 +1,332 @@
+[
+  {
+    "number": 3,
+    "id": "zhuangzi",
+    "zh": "庄子",
+    "en": "Zhuangzi"
+  },
+  {
+    "number": 10,
+    "id": "socrates",
+    "zh": "苏格拉底",
+    "en": "Socrates"
+  },
+  {
+    "number": 11,
+    "id": "plato",
+    "zh": "柏拉图",
+    "en": "Plato"
+  },
+  {
+    "number": 12,
+    "id": "aristotle",
+    "zh": "亚里士多德",
+    "en": "Aristotle"
+  },
+  {
+    "number": 16,
+    "id": "augustine",
+    "zh": "奥古斯丁",
+    "en": "Augustine of Hippo"
+  },
+  {
+    "number": 17,
+    "id": "aquinas",
+    "zh": "托马斯·阿奎那",
+    "en": "Thomas Aquinas"
+  },
+  {
+    "number": 19,
+    "id": "descartes",
+    "zh": "笛卡尔",
+    "en": "René Descartes"
+  },
+  {
+    "number": 20,
+    "id": "spinoza",
+    "zh": "斯宾诺莎",
+    "en": "Baruch Spinoza"
+  },
+  {
+    "number": 21,
+    "id": "leibniz",
+    "zh": "莱布尼茨",
+    "en": "Gottfried Wilhelm Leibniz"
+  },
+  {
+    "number": 23,
+    "id": "hume",
+    "zh": "休谟",
+    "en": "David Hume"
+  },
+  {
+    "number": 24,
+    "id": "rousseau",
+    "zh": "卢梭",
+    "en": "Jean-Jacques Rousseau"
+  },
+  {
+    "number": 25,
+    "id": "kant",
+    "zh": "康德",
+    "en": "Immanuel Kant"
+  },
+  {
+    "number": 26,
+    "id": "hegel",
+    "zh": "黑格尔",
+    "en": "G. W. F. Hegel"
+  },
+  {
+    "number": 27,
+    "id": "schopenhauer",
+    "zh": "叔本华",
+    "en": "Arthur Schopenhauer"
+  },
+  {
+    "number": 28,
+    "id": "kierkegaard",
+    "zh": "克尔凯郭尔",
+    "en": "Søren Kierkegaard"
+  },
+  {
+    "number": 29,
+    "id": "marx",
+    "zh": "马克思",
+    "en": "Karl Marx"
+  },
+  {
+    "number": 30,
+    "id": "nietzsche",
+    "zh": "尼采",
+    "en": "Friedrich Nietzsche"
+  },
+  {
+    "number": 31,
+    "id": "husserl",
+    "zh": "胡塞尔",
+    "en": "Edmund Husserl"
+  },
+  {
+    "number": 32,
+    "id": "heidegger",
+    "zh": "海德格尔",
+    "en": "Martin Heidegger"
+  },
+  {
+    "number": 33,
+    "id": "russell",
+    "zh": "罗素",
+    "en": "Bertrand Russell"
+  },
+  {
+    "number": 34,
+    "id": "wittgenstein",
+    "zh": "维特根斯坦",
+    "en": "Ludwig Wittgenstein"
+  },
+  {
+    "number": 35,
+    "id": "sartre",
+    "zh": "萨特",
+    "en": "Jean-Paul Sartre"
+  },
+  {
+    "number": 40,
+    "id": "habermas",
+    "zh": "哈贝马斯",
+    "en": "Jürgen Habermas"
+  },
+  {
+    "number": 41,
+    "id": "homer",
+    "zh": "荷马",
+    "en": "Homer"
+  },
+  {
+    "number": 42,
+    "id": "dante",
+    "zh": "但丁",
+    "en": "Dante Alighieri"
+  },
+  {
+    "number": 43,
+    "id": "shakespeare",
+    "zh": "莎士比亚",
+    "en": "William Shakespeare"
+  },
+  {
+    "number": 44,
+    "id": "cervantes",
+    "zh": "塞万提斯",
+    "en": "Miguel de Cervantes"
+  },
+  {
+    "number": 49,
+    "id": "pushkin",
+    "zh": "普希金",
+    "en": "Alexander Pushkin"
+  },
+  {
+    "number": 51,
+    "id": "gogol",
+    "zh": "果戈理",
+    "en": "Nikolai Gogol"
+  },
+  {
+    "number": 52,
+    "id": "dostoevsky",
+    "zh": "陀思妥耶夫斯基",
+    "en": "Fyodor Dostoevsky"
+  },
+  {
+    "number": 53,
+    "id": "tolstoy",
+    "zh": "列夫·托尔斯泰",
+    "en": "Leo Tolstoy"
+  },
+  {
+    "number": 54,
+    "id": "chekhov",
+    "zh": "契诃夫",
+    "en": "Anton Chekhov"
+  },
+  {
+    "number": 55,
+    "id": "kafka",
+    "zh": "卡夫卡",
+    "en": "Franz Kafka"
+  },
+  {
+    "number": 56,
+    "id": "zweig",
+    "zh": "茨威格",
+    "en": "Stefan Zweig"
+  },
+  {
+    "number": 59,
+    "id": "hugo",
+    "zh": "雨果",
+    "en": "Victor Hugo"
+  },
+  {
+    "number": 63,
+    "id": "camus",
+    "zh": "加缪",
+    "en": "Albert Camus"
+  },
+  {
+    "number": 65,
+    "id": "marquez",
+    "zh": "加西亚·马尔克斯",
+    "en": "Gabriel García Márquez"
+  },
+  {
+    "number": 71,
+    "id": "tagore",
+    "zh": "泰戈尔",
+    "en": "Rabindranath Tagore"
+  },
+  {
+    "number": 74,
+    "id": "li-bai",
+    "zh": "李白",
+    "en": "Li Bai"
+  },
+  {
+    "number": 75,
+    "id": "du-fu",
+    "zh": "杜甫",
+    "en": "Du Fu"
+  },
+  {
+    "number": 76,
+    "id": "su-shi",
+    "zh": "苏轼",
+    "en": "Su Shi"
+  },
+  {
+    "number": 78,
+    "id": "cao-xueqin",
+    "zh": "曹雪芹",
+    "en": "Cao Xueqin"
+  },
+  {
+    "number": 79,
+    "id": "lu-xun",
+    "zh": "鲁迅",
+    "en": "Lu Xun"
+  },
+  {
+    "number": 81,
+    "id": "euclid",
+    "zh": "欧几里得",
+    "en": "Euclid"
+  },
+  {
+    "number": 82,
+    "id": "newton",
+    "zh": "牛顿",
+    "en": "Isaac Newton"
+  },
+  {
+    "number": 83,
+    "id": "euler",
+    "zh": "欧拉",
+    "en": "Leonhard Euler"
+  },
+  {
+    "number": 84,
+    "id": "gauss",
+    "zh": "高斯",
+    "en": "Carl Friedrich Gauss"
+  },
+  {
+    "number": 85,
+    "id": "riemann",
+    "zh": "黎曼",
+    "en": "Bernhard Riemann"
+  },
+  {
+    "number": 86,
+    "id": "galois",
+    "zh": "伽罗瓦",
+    "en": "Évariste Galois"
+  },
+  {
+    "number": 89,
+    "id": "hilbert",
+    "zh": "希尔伯特",
+    "en": "David Hilbert"
+  },
+  {
+    "number": 90,
+    "id": "grothendieck",
+    "zh": "格罗滕迪克",
+    "en": "Alexander Grothendieck"
+  },
+  {
+    "number": 91,
+    "id": "turing",
+    "zh": "图灵",
+    "en": "Alan Turing"
+  },
+  {
+    "number": 92,
+    "id": "einstein",
+    "zh": "爱因斯坦",
+    "en": "Albert Einstein"
+  },
+  {
+    "number": null,
+    "id": "godel",
+    "zh": "哥德尔",
+    "en": "Kurt Gödel"
+  },
+  {
+    "number": null,
+    "id": "poincare",
+    "zh": "庞加莱",
+    "en": "Henri Poincaré"
+  }
+]

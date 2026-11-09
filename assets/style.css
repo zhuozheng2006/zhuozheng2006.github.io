@@ -24,17 +24,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .skip-link:focus { top: 1rem; }
 
 /* Full-width photographic masthead. */
-.site-header { position: absolute; z-index: 20; top: 0; left: 0; width: 100%; color: white; }
-.header-inner { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 1rem 2rem; padding-block: 1.65rem; border-bottom: 1px solid rgb(255 255 255 / 22%); }
+.site-header { width: 100%; background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 1rem 2rem; padding-block: 1.05rem; }
 .nav { display: flex; align-items: center; flex-wrap: wrap; gap: .3rem 1.9rem; font-size: .8125rem; }
-.nav a { display: inline-flex; align-items: center; min-height: 36px; color: white; text-decoration: none; opacity: .87; }
-.nav a:hover { color: white; opacity: 1; }
-.nav .nav__lang { border-left: 1px solid rgb(255 255 255 / 35%); padding-left: 1.75rem; }
-.site-header :focus-visible, .banner :focus-visible { outline-color: white; }
+.nav a { display: inline-flex; align-items: center; min-height: 36px; color: var(--soft); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+.nav .nav__lang { color: var(--accent); border-left: 1px solid var(--line); padding-left: 1.75rem; }
+.banner :focus-visible { outline-color: white; }
 .banner { --portrait-width: clamp(280px, 25vw, 440px); position: relative; height: clamp(500px, 42vw, 620px); overflow: hidden; isolation: isolate; background: #22282b; color: white; }
 .banner__portraits { position: absolute; inset: 0; overflow: hidden; }
-.banner__track { display: flex; width: max-content; height: 100%; animation: portrait-loop var(--banner-duration, 160s) linear infinite paused; will-change: transform; }
+.banner__track { display: flex; width: max-content; height: 100%; animation: portrait-loop var(--banner-duration, 160s) linear infinite paused; }
 .banner__group { display: flex; flex: 0 0 auto; width: max-content; height: 100%; }
+.banner__fallback { position: absolute; z-index: 1; inset: 0; display: flex; height: 100%; overflow: hidden; background: #22282b; }
 .banner__portrait { position: relative; flex: 0 0 var(--portrait-width); width: var(--portrait-width); min-width: 0; height: 100%; overflow: hidden; border-right: 1px solid rgb(255 255 255 / 10%); }
 .banner[data-playing="true"] .banner__track { animation-play-state: running; }
 .banner[data-visible="false"] .banner__track { animation-play-state: paused; }
@@ -44,14 +45,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .banner__portrait--kant img { object-position: 60% 23%; }
 .banner__portrait--hegel img { object-position: 44% 25%; }
 .banner__portrait--nietzsche img { object-position: 50% 24%; }
+.banner__portrait--cao-xueqin img { transform: scale(1.65); transform-origin: 56% 35%; }
+.banner__portrait--augustine img { transform: scale(1.35); transform-origin: 57% 24%; }
+.banner__portrait--zhuangzi img { transform: scale(1.35); transform-origin: 50% 23%; }
+.banner__portrait--li-bai img { transform: scale(1.25); transform-origin: 50% 20%; }
 .banner__portrait::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, transparent 50%, rgb(15 22 27 / 30%) 75%, rgb(15 22 27 / 85%) 100%); pointer-events: none; }
-.banner__portrait figcaption { position: absolute; z-index: 2; bottom: 4.5rem; left: 1rem; right: 1rem; color: white; font-size: .8125rem; line-height: 1.6; letter-spacing: .07em; text-align: center; text-shadow: 0 1px 7px rgb(0 0 0 / 65%); }
 .banner__shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgb(15 22 27 / 72%) 0%, rgb(15 22 27 / 10%) 28%, transparent 48%); pointer-events: none; }
 .banner__scroll { position: absolute; z-index: 3; bottom: 1.6rem; left: calc(50% - 22px); display: grid; place-items: center; width: 44px; height: 44px; color: white; text-decoration: none; font-size: 1.4rem; opacity: .75; }
 .banner__scroll:hover { color: white; opacity: 1; }
-.banner__toggle { position: absolute; z-index: 4; right: max(24px, calc((100vw - 1100px) / 2)); bottom: 1.6rem; min-height: 44px; padding: .5rem .9rem; border: 1px solid rgb(255 255 255 / 45%); border-radius: 3px; background: rgb(15 22 27 / 55%); color: white; font: inherit; font-size: .75rem; cursor: pointer; }
-.banner__toggle:hover { border-color: white; background: rgb(15 22 27 / 80%); }
-.banner__toggle[hidden] { display: none; }
 
 /* A compact introduction below the banner. */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 3rem 5.5rem; align-items: center; padding-block: 3.75rem; }
@@ -136,9 +137,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .nav { gap: .2rem 1.1rem; font-size: .75rem; }
   .nav .nav__lang { padding-left: 1rem; }
   .banner { --portrait-width: 260px; height: 440px; }
-  .banner__portrait figcaption { bottom: 4.2rem; font-size: .75rem; }
   .banner__scroll { bottom: .85rem; }
-  .banner__toggle { bottom: .85rem; right: 20px; padding-inline: .65rem; font-size: .6875rem; }
   .hero { position: relative; display: block; padding-block: 2.6rem; }
   .hero__copy { display: block; }
   .profile-heading { margin-bottom: .75rem; font-size: .75rem; }
