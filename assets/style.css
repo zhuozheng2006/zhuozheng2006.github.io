@@ -1,303 +1,173 @@
-/* ============================================================
-   郑卓个人主页 · 样式
-   版式：左侧固定侧栏（照片、姓名、学校、邮箱）+ 右侧主栏
-   ============================================================ */
-
+/* A quiet, editorial homepage. No remote fonts or script dependencies. */
 :root {
-  --paper: #f6f7f4;
-  --ink: #1d242c;
-  --soft: #49525d;
-  --muted: #79828d;
-  --hairline: #dfe3df;
-  --accent: #a03c2c;
-  --accent-soft: rgba(160, 60, 44, 0.45);
-  --serif: "STIX Two Text", "Noto Serif SC", "Songti SC", "SimSun", serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+  --paper: #f8f6f1;
+  --ink: #292925;
+  --soft: #55554d;
+  --muted: #716d63;
+  --line: #d9d3c7;
+  --accent: #8b3b32;
+  --serif: Georgia, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; color-scheme: light; }
-
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
 body {
   margin: 0;
-  min-height: 100vh;
+  background: var(--paper);
   color: var(--ink);
-  background-color: var(--paper);
-  background-image:
-    radial-gradient(circle at 14% 6%, rgba(29, 36, 44, 0.02), transparent 40%),
-    radial-gradient(circle at 86% 96%, rgba(29, 36, 44, 0.025), transparent 45%);
   font-family: var(--serif);
   font-size: 1.0625rem;
-  line-height: 1.9;
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+}
+::selection { background: #e7d6cd; color: var(--ink); }
+a { color: inherit; text-underline-offset: .26em; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent); }
+img { display: block; max-width: 100%; }
+p, h1, h2, h3, figure { margin: 0; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.page-shell { width: min(1080px, calc(100% - 96px)); margin-inline: auto; }
+.skip-link { position: absolute; top: -6rem; left: 1rem; z-index: 10; padding: .6rem 1rem; background: var(--ink); color: var(--paper); font-family: var(--sans); }
+.skip-link:focus { top: 1rem; color: var(--paper); }
+
+/* Masthead */
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem 2rem; padding-block: 2rem 1.55rem; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .9rem; text-decoration: none; }
+.brand__cn { font-size: 1.15rem; letter-spacing: .18em; }
+.brand__en { padding-left: .95rem; border-left: 1px solid var(--line); font-size: .76rem; color: var(--muted); letter-spacing: .09em; }
+.nav { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1.85rem; font-family: var(--sans); font-size: .8125rem; }
+.nav a { display: inline-flex; align-items: center; min-height: 36px; color: var(--soft); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+.nav .nav__lang { color: var(--accent); border-left: 1px solid var(--line); padding-left: 1.75rem; }
+
+/* Portrait and introduction */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 222px; align-items: center; column-gap: clamp(3rem, 9vw, 8rem); padding-block: 5.75rem 5.4rem; }
+.hero__copy { min-width: 0; }
+.eyebrow { font-family: var(--sans); font-size: .7rem; line-height: 1.6; letter-spacing: .21em; text-transform: uppercase; color: var(--accent); }
+.hero h1 { margin-top: 1.25rem; font-weight: 400; line-height: 1.2; }
+.hero__name { display: block; font-size: clamp(3.25rem, 5.5vw, 4.5rem); letter-spacing: .12em; }
+.hero__latin { display: block; margin-top: .75rem; font-size: 1.4rem; line-height: 1.4; letter-spacing: .035em; font-weight: 400; color: var(--soft); }
+html[lang="en"] .hero__name { font-size: clamp(2.8rem, 5vw, 4rem); letter-spacing: -.035em; }
+html[lang="en"] .hero__latin { letter-spacing: .16em; }
+.hero__affiliation { margin-top: 1.75rem; color: var(--soft); font-size: 1rem; }
+.hero__intro { max-width: 35rem; margin-top: 1.05rem; color: var(--soft); line-height: 1.95; text-wrap: pretty; }
+.hero__links { display: flex; flex-wrap: wrap; gap: .5rem 1.8rem; margin-top: 1.75rem; }
+.text-link { font-family: var(--sans); font-size: .8125rem; color: var(--accent); text-decoration-color: #b5988c; }
+.portrait { position: relative; width: 100%; padding: 9px; border: 1px solid var(--line); }
+.portrait::after { content: ""; position: absolute; top: 9px; right: -9px; bottom: -9px; left: 9px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); pointer-events: none; }
+.portrait img { width: 100%; height: auto; aspect-ratio: 255 / 295; object-fit: cover; }
+.portrait figcaption { padding: .75rem .15rem .1rem; color: var(--muted); font-family: var(--sans); font-size: .65rem; letter-spacing: .14em; text-align: center; }
+.hero__note { grid-column: 1 / -1; margin-top: 2rem; color: var(--muted); font-style: italic; }
+
+/* Three original mathematical touchstones, typeset natively. */
+.formula-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); padding-block: 1.6rem; }
+.formula { min-width: 0; padding: .4rem 1rem; text-align: center; }
+.formula + .formula { border-left: 1px solid var(--line); }
+.formula__math { display: flex; align-items: center; justify-content: center; min-height: 3.3rem; font-size: 1.35rem; }
+.formula__math math { margin: 0; font-family: "STIX Two Math", "Cambria Math", "Latin Modern Math", math; }
+.formula figcaption { margin-top: .65rem; color: var(--muted); font-size: .75rem; line-height: 1.6; }
+.formula__number { display: inline-block; margin-right: .55rem; color: var(--accent); font-size: .7rem; font-style: italic; }
+
+/* Section labels sit in the margin, like a book's running notes. */
+.section { display: grid; grid-template-columns: 220px minmax(0, 1fr); column-gap: 3.25rem; padding-block: 4.5rem; border-bottom: 1px solid var(--line); }
+.section-heading h2 { font-size: 1.6rem; font-weight: 400; line-height: 1.4; letter-spacing: .035em; }
+.section-number { display: block; margin-bottom: 1rem; font-size: .75rem; line-height: 1; color: var(--accent); letter-spacing: .06em; }
+.section-kicker { margin-top: .65rem; font-family: var(--sans); font-size: .6875rem; letter-spacing: .12em; line-height: 1.7; text-transform: uppercase; color: var(--muted); }
+.section-body { min-width: 0; }
+.project { display: grid; grid-template-columns: 24px minmax(0, 1fr) 32px; align-items: start; gap: 1.2rem; padding-bottom: 2.1rem; }
+.project + .project { padding-top: 2.1rem; border-top: 1px solid var(--line); }
+.project:last-child { padding-bottom: 0; }
+.project__index { color: var(--muted); font-size: .75rem; font-style: italic; padding-top: .1rem; }
+.project__meta { font-family: var(--sans); font-size: .6875rem; line-height: 1.8; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+.project h3 { margin-top: .45rem; font-size: 1.55rem; font-weight: 400; line-height: 1.45; letter-spacing: -.025em; }
+.project h3 a { text-decoration: none; }
+.project__content > p:not(.project__meta) { margin-top: .75rem; font-size: 1rem; color: var(--soft); line-height: 1.9; text-wrap: pretty; }
+.project__arrow { display: flex; align-items: center; justify-content: center; width: 36px; height: 44px; margin-top: 1.2rem; color: var(--accent); text-decoration: none; font-size: 1.4rem; transition: transform 160ms ease; }
+.project__arrow:hover { transform: translate(2px, -2px); }
+.note-link { display: grid; grid-template-columns: minmax(0, 1fr); gap: .75rem; text-decoration: none; }
+.note-link__title { font-size: 1.35rem; line-height: 1.5; }
+.note-link__description { font-size: 1rem; line-height: 1.9; color: var(--soft); }
+.note-link__cta { margin-top: .35rem; font-family: var(--sans); font-size: .8125rem; line-height: 1.7; color: var(--accent); text-decoration: underline; text-decoration-color: #b5988c; text-underline-offset: .26em; }
+.note-link__cta > span { display: inline-block; margin-left: .25rem; }
+.note-link:hover .note-link__title { color: var(--accent); text-decoration: underline; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+
+/* Closing invitation */
+.contact { padding-block: 4.25rem 4.75rem; text-align: center; }
+.contact h2 { font-size: 1.65rem; line-height: 1.45; font-weight: 400; letter-spacing: .05em; }
+.contact p { margin-top: .85rem; font-size: 1rem; color: var(--soft); }
+.contact .eyebrow { margin: 0 0 1.1rem; font-size: .7rem; color: var(--accent); }
+.contact > a { display: inline-block; margin-top: 1.1rem; font-size: 1rem; color: var(--accent); overflow-wrap: anywhere; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 1.5rem; border-top: 1px solid var(--line); padding-block: 1.6rem 2rem; font-family: var(--sans); font-size: .7rem; color: var(--muted); letter-spacing: .025em; }
+.site-footer a { text-decoration: none; }
+
+@media (max-width: 900px) {
+  .page-shell { width: calc(100% - 64px); }
+  .brand__en { display: none; }
+  .hero { grid-template-columns: minmax(0, 1fr) 180px; column-gap: 3rem; padding-block: 4.25rem; }
+  .hero__name { font-size: 3.5rem; }
+  .section { grid-template-columns: 165px minmax(0, 1fr); column-gap: 2rem; }
+  .formula__math { font-size: 1.1rem; }
+  .formula { padding-inline: .5rem; }
 }
 
-::selection { background: var(--accent); color: var(--paper); }
-
-a { color: inherit; }
-
-.site-header,
-.layout,
-.site-footer {
-  width: min(100% - 2.5rem, 64rem);
-  margin-inline: auto;
+@media (max-width: 600px) {
+  .page-shell { width: calc(100% - 40px); }
+  .site-header { flex-wrap: wrap; padding-block: 1.25rem 1rem; gap: .7rem 1.5rem; }
+  .brand__cn { font-size: 1.05rem; }
+  .nav { gap: .25rem 1.15rem; font-size: .75rem; }
+  .nav .nav__lang { padding-left: 1rem; }
+  .hero { position: relative; display: block; padding-block: 3.2rem 2.8rem; }
+  .hero .eyebrow { max-width: calc(100% - 115px); font-size: .625rem; letter-spacing: .12em; }
+  .hero h1 { max-width: calc(100% - 115px); margin-top: 1rem; min-height: 106px; }
+  .hero__name { font-size: 3rem; }
+  .hero__latin { font-size: 1.1rem; margin-top: .55rem; }
+  html[lang="en"] .hero__name { font-size: clamp(1.85rem, 7.5vw, 2.8rem); }
+  .portrait { position: absolute; top: 3.3rem; right: 4px; width: 98px; padding: 4px; }
+  .portrait::after { top: 5px; left: 5px; right: -5px; bottom: -5px; }
+  .portrait figcaption { display: none; }
+  .hero__affiliation { margin-top: 1.45rem; font-size: .9375rem; }
+  .hero__intro { font-size: 1rem; line-height: 1.9; }
+  .hero__links { margin-top: 1.35rem; gap: .5rem 1.5rem; }
+  .formula-strip { grid-template-columns: 1fr; padding-block: .5rem; }
+  .formula { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: .8rem; align-items: center; text-align: left; padding: .85rem .1rem; }
+  .formula + .formula { border-left: 0; border-top: 1px solid var(--line); }
+  .formula__math { min-height: 2.4rem; font-size: 1rem; }
+  .formula figcaption { margin-top: 0; font-size: .6875rem; }
+  .formula__number { margin-right: .35rem; }
+  .section { display: block; padding-block: 2.8rem; }
+  .section-heading { margin-bottom: 1.8rem; }
+  .section-heading h2 { font-size: 1.45rem; }
+  .section-number { display: inline; margin-right: .9rem; font-size: .7rem; }
+  .section-kicker { margin-left: 2.1rem; margin-top: .35rem; font-size: .625rem; }
+  .project { grid-template-columns: 18px minmax(0, 1fr) 26px; gap: .7rem; padding-bottom: 1.6rem; }
+  .project + .project { padding-top: 1.6rem; }
+  .project h3 { font-size: 1.35rem; }
+  .project__arrow { width: 26px; }
+  .note-link__title { font-size: 1.25rem; }
+  .contact { padding-block: 3rem; }
+  .contact h2 { font-size: 1.4rem; }
+  .site-footer { font-size: .65rem; padding-block: 1.3rem 1.6rem; }
 }
 
-/* ---------- 顶栏 ---------- */
-
-.site-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 2rem;
-  align-items: center;
-  justify-content: space-between;
-  padding-block: 1.6rem 1.1rem;
-  border-bottom: 1px solid var(--hairline);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.header__side {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1.5rem;
-}
-
-.brand { text-decoration: none; font-weight: 500; }
-.brand__slash, .brand__sub { color: var(--muted); font-weight: 400; }
-
-.nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.35rem; }
-.nav a { color: var(--muted); text-decoration: none; transition: color 160ms ease, border-color 160ms ease; }
-.nav a:hover { color: var(--ink); }
-.nav__lang {
-  color: var(--accent);
-  border-bottom: 1px solid var(--accent-soft);
-  padding-bottom: 2px;
-}
-.nav a.nav__lang:hover { color: var(--accent); border-bottom-color: var(--accent); }
-
-/* ---------- 版式：左侧栏 + 主栏 ---------- */
-
-.layout {
-  display: grid;
-  grid-template-columns: 15.5rem minmax(0, 1fr);
-  column-gap: 3.75rem;
-}
-
-/* ---------- 侧栏（个人信息） ---------- */
-
-.profile {
-  position: sticky;
-  top: 2.25rem;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  padding-top: 4.25rem;
-}
-
-.profile__photo {
-  width: 8.25rem;
-  height: 8.25rem;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid var(--hairline);
-  padding: 0.4rem;
-  background: var(--paper);
-  box-shadow: 0 0 0 1px var(--hairline);
-}
-
-.profile__name {
-  margin: 1.7rem 0 0;
-  margin-right: -0.3em; /* 抵消 letter-spacing 的尾部空距 */
-  font-size: 1.9rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  line-height: 1.2;
-}
-
-.profile__latin {
-  margin: 0.65rem 0 0;
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.profile__affil {
-  margin: 1.25rem 0 0;
-  font-size: 1rem;
-  color: var(--soft);
-}
-.profile__affil--sub { display: block; margin-top: 0.15rem; color: var(--muted); }
-
-.profile__email { margin: 0.4rem 0 0; }
-.profile__email a {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid var(--accent-soft);
-  padding-bottom: 2px;
-  transition: color 160ms ease, border-color 160ms ease;
-}
-.profile__email a:hover { color: var(--ink); border-bottom-color: var(--ink); }
-
-/* ---------- 主栏 ---------- */
-
-.main-col { padding-top: 4.25rem; }
-
-/* ---------- 公式带（纵向排列） ---------- */
-
-.equations {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0;
-  border-top: 1px solid var(--hairline);
-  border-bottom: 1px solid var(--hairline);
-}
-
-.equation {
-  margin: 0;
-  min-width: 0;
-  padding: 2.4rem 1.5rem 2.1rem;
-  text-align: center;
-}
-.equation + .equation { border-top: 1px solid var(--hairline); }
-
-.equation__formula {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.5rem;
-  font-size: clamp(1rem, 1.6vw, 1.22rem);
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.equation__formula .katex-display { margin: 0; }
-
-.equation figcaption {
-  margin: 1.15rem 0 0;
-  font-family: var(--mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.05em;
-  line-height: 1.75;
-  color: var(--muted);
-}
-
-/* ---------- 正文小节 ---------- */
-
-.section { padding-top: 4rem; }
-.section h2 {
-  margin: 0 0 1.6rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid var(--hairline);
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-}
-.section__no {
-  margin-right: 0.9rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  vertical-align: 0.22em;
-}
-.lead { margin: 0; font-size: 1.12rem; }
-
-.notes, .projects {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.note { padding: 1.4rem 0; border-bottom: 1px solid var(--hairline); }
-.note:first-child { border-top: 1px solid var(--hairline); }
-.note__meta {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-}
-.note__title {
-  display: inline-block;
-  margin-top: 0.4rem;
-  font-size: 1.12rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 160ms ease, color 160ms ease;
-}
-.note__title:hover { color: var(--accent); border-bottom-color: var(--accent); }
-.note__title--plain:hover { color: inherit; border-bottom-color: transparent; }
-.note__excerpt { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.95rem; }
-
-.projects li { border-bottom: 1px solid var(--hairline); }
-.projects li:first-child { border-top: 1px solid var(--hairline); }
-.projects a {
-  display: grid;
-  grid-template-columns: minmax(8rem, 34%) 1fr auto;
-  gap: 1.25rem;
-  align-items: baseline;
-  padding: 1.1rem 0;
-  text-decoration: none;
-}
-.projects strong { font-weight: 600; }
-.projects span { color: var(--muted); font-size: 0.94rem; }
-.projects i { font-style: normal; color: var(--accent); transition: transform 160ms ease; }
-.projects a:hover i { transform: translateX(4px); }
-.projects a:hover strong { color: var(--accent); }
-
-/* ---------- 页脚 ---------- */
-
-.site-footer {
-  margin-top: 4.5rem;
-  padding-top: 1.9rem;
-  border-top: 1px solid var(--hairline);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--muted);
-}
-.site-footer__meta { margin: 0; letter-spacing: 0.04em; }
-.site-footer__page {
-  margin: 1.6rem 0 2.75rem;
-  text-align: center;
-  letter-spacing: 0.2em;
-}
-
-/* ---------- 键盘焦点与动效偏好 ---------- */
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+@media (max-width: 380px) {
+  .formula { display: block; text-align: center; padding-block: 1rem; }
+  .formula figcaption { margin-top: .5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *, *::before, *::after { transition: none !important; }
 }
 
-/* ---------- 小屏：侧栏折叠为顶部居中 ---------- */
-
-@media (max-width: 880px) {
-  .layout { grid-template-columns: 1fr; }
-  .profile {
-    position: static;
-    align-items: center;
-    text-align: center;
-    padding-top: 3rem;
-  }
-  .profile__affil--sub { display: inline; margin-top: 0; }
-  .main-col { padding-top: 0; }
-  .equations { margin-top: 3.5rem; }
-  .projects a { grid-template-columns: 1fr; gap: 0.15rem; }
+@media print {
+  body { background: white; color: black; }
+  .page-shell { width: 100%; }
+  .nav, .skip-link, .project__arrow, .site-footer > a { display: none; }
+  .hero { padding-block: 2rem; }
+  .section { padding-block: 2rem; break-inside: avoid; }
+  .contact { padding-block: 2rem; }
+  a { text-decoration: none; }
 }
