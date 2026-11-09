@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PORTRAITS = json.loads((ROOT / "assets/portraits/portraits.json").read_text())
-VERSION = "20261110-selected55"
+VERSION = "20261110-curated49"
 
 
 def esc(value):
@@ -60,6 +60,8 @@ items = []
 for person in PORTRAITS:
     kind = {"sculpture": "雕像照片 / Sculpture photograph", "imagined": "后世画像 / Later imagined portrait"}.get(person.get("kind"), "")
     detail = f"<br>{kind}" if kind else ""
+    if person.get("note"):
+        detail += f'<br>{esc(person["note"])}'
     items.append(
         f'      <li><strong>{esc(person["zh"])} / {esc(person["en"])}</strong><br>'
         f'{esc(person["creator"])}{detail}<br>'
@@ -93,7 +95,7 @@ for person in PORTRAITS:
 
 lines = [
     "# Selected portrait credits", "",
-    "The homepage displays these 55 selected people in a new random order on each load.",
+    f"The homepage displays these {len(PORTRAITS)} selected people in a new random order on each load.",
     "Images are resized and WebP-compressed; grayscale and framing are applied with CSS.",
     "", "| File | Subject | Creator | License | Source | Type |",
     "| --- | --- | --- | --- | --- | --- |",
@@ -102,7 +104,7 @@ for person in PORTRAITS:
     lines.append(
         f'| {Path(person["file"]).name} | {person["zh"]} / {person["en"]} | '
         f'{person["creator"]} | [{person["license"]}]({person["licenseUrl"]}) | '
-        f'[Commons]({person["source"]}) | {person.get("kind", "portrait")} |'
+        f'[Commons]({person["source"]}) | {person.get("kind", "portrait")}; {person.get("note", "")} |'
     )
 (ROOT / "assets/portraits/ATTRIBUTIONS.md").write_text("\n".join(lines) + "\n")
 print(f"Updated bilingual pages and credits for {len(PORTRAITS)} portraits.")

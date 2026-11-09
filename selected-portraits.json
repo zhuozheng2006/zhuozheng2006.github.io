@@ -84,12 +84,6 @@
     "en": "Arthur Schopenhauer"
   },
   {
-    "number": 28,
-    "id": "kierkegaard",
-    "zh": "克尔凯郭尔",
-    "en": "Søren Kierkegaard"
-  },
-  {
     "number": 29,
     "id": "marx",
     "zh": "马克思",
@@ -100,12 +94,6 @@
     "id": "nietzsche",
     "zh": "尼采",
     "en": "Friedrich Nietzsche"
-  },
-  {
-    "number": 31,
-    "id": "husserl",
-    "zh": "胡塞尔",
-    "en": "Edmund Husserl"
   },
   {
     "number": 32,
@@ -168,12 +156,6 @@
     "en": "Alexander Pushkin"
   },
   {
-    "number": 51,
-    "id": "gogol",
-    "zh": "果戈理",
-    "en": "Nikolai Gogol"
-  },
-  {
     "number": 52,
     "id": "dostoevsky",
     "zh": "陀思妥耶夫斯基",
@@ -186,22 +168,10 @@
     "en": "Leo Tolstoy"
   },
   {
-    "number": 54,
-    "id": "chekhov",
-    "zh": "契诃夫",
-    "en": "Anton Chekhov"
-  },
-  {
     "number": 55,
     "id": "kafka",
     "zh": "卡夫卡",
     "en": "Franz Kafka"
-  },
-  {
-    "number": 56,
-    "id": "zweig",
-    "zh": "茨威格",
-    "en": "Stefan Zweig"
   },
   {
     "number": 59,
@@ -220,12 +190,6 @@
     "id": "marquez",
     "zh": "加西亚·马尔克斯",
     "en": "Gabriel García Márquez"
-  },
-  {
-    "number": 71,
-    "id": "tagore",
-    "zh": "泰戈尔",
-    "en": "Rabindranath Tagore"
   },
   {
     "number": 74,

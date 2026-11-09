@@ -45,9 +45,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .banner__portrait--kant img { object-position: 60% 23%; }
 .banner__portrait--hegel img { object-position: 44% 25%; }
 .banner__portrait--nietzsche img { object-position: 50% 24%; }
-.banner__portrait--cao-xueqin img { transform: scale(1.65); transform-origin: 56% 35%; }
-.banner__portrait--augustine img { transform: scale(1.35); transform-origin: 57% 24%; }
+.banner__portrait--cao-xueqin img { transform: scale(1.7); transform-origin: 50% 22%; }
+.banner__portrait--augustine img { transform: scale(1.5); transform-origin: 57% 20%; }
 .banner__portrait--zhuangzi img { transform: scale(1.35); transform-origin: 50% 23%; }
+.banner__portrait--russell img { object-position: 58% 20%; }
+.banner__portrait--heidegger img { transform: scale(1.2); transform-origin: 50% 23%; }
+.banner__portrait--habermas img { object-position: 23% 20%; }
 .banner__portrait--li-bai img { transform: scale(1.25); transform-origin: 50% 20%; }
 .banner__portrait::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, transparent 50%, rgb(15 22 27 / 30%) 75%, rgb(15 22 27 / 85%) 100%); pointer-events: none; }
 .banner__shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgb(15 22 27 / 72%) 0%, rgb(15 22 27 / 10%) 28%, transparent 48%); pointer-events: none; }
