@@ -7,8 +7,9 @@
 - `index.html`：中文首页。
 - `en.html`：英文首页，内容与中文保持同步。
 - `assets/style.css`：响应式布局、字体与配色。
+- `assets/banner.js`：12 位人物肖像的无缝横向循环、暂停与播放控制；遵循系统减少动态效果偏好。
 - `photo.jpg`：个人照片。
-- `assets/portraits/`：顶部哲学家肖像，随站点保存，来源记录见该目录的 `ATTRIBUTIONS.md`。
+- `assets/portraits/`：顶部哲学家与文学家肖像，随站点保存，来源记录见该目录的 `ATTRIBUTIONS.md`。
 - `credits.html`：图片作者、年代与原始来源。
 - `404.html`：找不到页面时的引导。
 - `sitemap.xml`、`robots.txt`：搜索引擎索引。
