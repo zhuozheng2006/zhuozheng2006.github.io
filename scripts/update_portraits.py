@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PORTRAITS = json.loads((ROOT / "assets/portraits/portraits.json").read_text())
-VERSION = "20261110-classic"
+VERSION = "20261110-formulas"
 
 
 def esc(value):

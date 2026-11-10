@@ -88,7 +88,7 @@ p, h1, h2, h3, figure, blockquote { margin: 0; }
 .formula-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-block: 2rem; border-block: 1px solid var(--line); }
 .formula { min-width: 0; padding: .25rem 1rem; text-align: center; }
 .formula__math { display: flex; align-items: center; justify-content: center; min-height: 3.2rem; font-size: 1.35rem; color: var(--ink); }
-.formula__math math { margin: 0; font-family: var(--math); }
+.formula__svg { display: block; width: var(--formula-width); max-width: 100%; height: auto; flex: 0 1 auto; }
 .formula figcaption { margin-top: .6rem; color: var(--muted); font-size: .8125rem; letter-spacing: .04em; }
 .formula__number { margin-right: .35rem; color: var(--accent); }
 
