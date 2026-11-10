@@ -6,7 +6,7 @@
 
 - `index.html`：中文首页。
 - `en.html`：英文首页，内容与中文保持同步。
-- `assets/style.css`：响应式布局、字体与配色。
+- `assets/style.css`：米白纸色、衬线字体、暗朱红点缀的单栏响应式布局；肖像使用暖灰色窄横幅。
 - `assets/banner.js`：肖像每次载入时随机排序，以 42px/s 无缝横向循环；遵循系统减少动态效果偏好。
 - `photo.jpg`：个人照片。
 - `assets/portraits/`：顶部哲学家、文学家与科学家肖像，随站点保存，来源记录见该目录的 `ATTRIBUTIONS.md`。
@@ -35,3 +35,7 @@ GitHub 仓库的 **Settings → Pages** 使用 **Deploy from a branch**，分支
 横幅使用已选定的 49 位哲学家、文学家与科学家（含哥德尔、庞加莱，以及保留的奥古斯丁、阿奎那、哈贝马斯、伽罗瓦、希尔伯特、格罗滕迪克）。
 `assets/portraits/portraits.json` 保存名单、来源、许可与图片尺寸；更新后运行 `python3 scripts/update_portraits.py` 同步中英文页面和署名。
 图片按显示需求压缩，首屏优先加载，其余在接近可视区时加载；无 JavaScript 时显示静态肖像。
+
+## 版式
+
+采用 Cherry Studio 提供的古典学术风格方案：720px 正文栏、维特根斯坦题词、括号公式编号、§ 栏目编号与 ∎ 页脚符号。中英文页面同步，窄屏页眉允许换行。
