@@ -7,9 +7,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FORMULAS = {
-    'euler': r'e^{i\pi}+1=0',
+    'gauss-bonnet': r'\int_M K\,\mathrm{d}A=2\pi\chi(M)',
+    'euler-product': r'\zeta(s)=\prod_p\frac{1}{1-p^{-s}}',
     'stokes': r'\int_{\partial\Omega}\omega=\int_{\Omega}\mathrm{d}\omega',
-    'gaussian': r'\int_{-\infty}^{\infty}e^{-x^2}\,\mathrm{d}x=\sqrt{\pi}',
 }
 
 def main():
