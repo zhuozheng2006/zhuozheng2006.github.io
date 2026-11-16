@@ -1,43 +1,28 @@
 # 郑卓 · Zhuo Zheng
 
-个人主页：<https://zhuozheng2006.github.io/>
+个人网站，包含个人介绍、项目与学习笔记，提供中英文版本。
 
-## 页面
-
-- `index.html`：中文首页。
-- `en.html`：英文首页，内容与中文保持同步。
-- `assets/style.css`：米白纸色、衬线字体、暗朱红点缀的单栏响应式布局；肖像使用暖灰色窄横幅。
-- `assets/banner.js`：肖像每次载入时随机排序，以 42px/s 无缝横向循环；遵循系统减少动态效果偏好。
-- `photo.jpg`：个人照片。
-- `assets/portraits/`：顶部哲学家、文学家与科学家肖像，随站点保存，来源记录见该目录的 `ATTRIBUTIONS.md`。
-- `credits.html`：图片作者、年代与原始来源。
-- `404.html`：找不到页面时的引导。
-- `sitemap.xml`、`robots.txt`：搜索引擎索引。
-
-这是一个无需构建的静态网站。公式使用 LaTeX 排版并转为包含字形路径的 SVG，字体使用系统字体，不依赖第三方脚本、字体或公式 CDN。运行 `python3 scripts/build_formulas.py` 可重新生成公式（维护时需安装 LaTeX 和 dvisvgm，访问网站无需安装）。
+[中文主页](https://zhuozheng2006.github.io/) · [English](https://zhuozheng2006.github.io/en.html)
 
 ## 本地预览
+
+无需构建或安装依赖，在仓库目录运行：
 
 ```sh
 python3 -m http.server 8000
 ```
 
-访问 <http://localhost:8000>。修改个人介绍或项目时，请同时更新中英文页面。
+打开 <http://localhost:8000>。
 
-## 发布
+## 维护
 
-GitHub 仓库的 **Settings → Pages** 使用 **Deploy from a branch**，分支为 **main**，目录为 **/(root)**。`.nojekyll` 使静态文件直接发布。以后提交到 `main` 后，GitHub Pages 会自动更新网站。
+- 页面内容：`index.html` 和 `en.html`，修改时同步两个语言版本。
+- 样式与交互：`assets/style.css` 和 `assets/banner.js`。
+- 肖像：名单与来源保存在 `assets/portraits/portraits.json`；运行 `python3 scripts/update_portraits.py` 同步页面与署名。
+- 公式：运行 `python3 scripts/build_formulas.py` 重新生成 SVG，需要 LaTeX 和 dvisvgm。
 
-新增论文或其他成果时，再加入对应栏目，避免显示空白栏目或未经核实的占位信息。
+网站通过 GitHub Pages 从 `main` 分支根目录发布，提交后自动更新。
 
-## 肖像维护
+## 图片来源
 
-横幅使用已选定的 49 位哲学家、文学家与科学家（含哥德尔、庞加莱，以及保留的奥古斯丁、阿奎那、哈贝马斯、伽罗瓦、希尔伯特、格罗滕迪克）。
-`assets/portraits/portraits.json` 保存名单、来源、许可与图片尺寸；更新后运行 `python3 scripts/update_portraits.py` 同步中英文页面和署名。
-图片按显示需求压缩，首屏优先加载，其余在接近可视区时加载；无 JavaScript 时显示静态肖像。
-
-## 版式
-
-采用 Cherry Studio 提供的古典学术风格方案：720px 正文栏、维特根斯坦题词、括号公式编号、§ 栏目编号与 ∎ 页脚符号。中英文页面同步，窄屏页眉允许换行。
-
-首页公式依次为高斯–博内公式、欧拉乘积和 Stokes 定理；适用条件包含在悬停提示与无障碍文字中。柏拉图与杜甫使用指定的维基百科简介图；横幅保留统一暖灰色调，并为全身像与留白较多的画像调整取景。
+肖像作者、许可与原始来源见 [图片署名](assets/portraits/ATTRIBUTIONS.md)。
