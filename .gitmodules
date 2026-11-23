@@ -1,0 +1,4 @@
+[submodule "meridian-atlas"]
+	path = meridian-atlas
+	url = https://github.com/zhuozheng2006/meridian-atlas.git
+	branch = atlas-pages

@@ -14,6 +14,8 @@ python3 -m http.server 8000
 
 打开 <http://localhost:8000>。
 
+要同时预览经纬纪，先运行 `git submodule update --init meridian-atlas` 下载站点锁定的图集版本，再打开 <http://localhost:8000/meridian-atlas/>。
+
 ## 维护
 
 - 页面内容：`index.html` 和 `en.html`，修改时同步两个语言版本。
@@ -22,6 +24,8 @@ python3 -m http.server 8000
 - 公式：运行 `python3 scripts/build_formulas.py` 重新生成 SVG，需要 LaTeX 和 dvisvgm。
 
 网站通过 GitHub Pages 从 `main` 分支根目录发布，提交后自动更新。
+
+[经纬纪](https://zhuozheng2006.github.io/meridian-atlas/) 使用图集仓库 `atlas-pages` 分支的静态文件。更新上线版本时，在本站仓库运行 `git submodule update --init --remote meridian-atlas`，预览确认后提交 `meridian-atlas` 指针。
 
 ## 图片来源
 
